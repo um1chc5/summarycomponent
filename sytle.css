@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+*, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Pale--blue: hsl(225, 100%, 94%);
+    --Bright--blue: hsl(245, 75%, 52%);
+    --Very--pale--blue: hsl(225, 100%, 98%);
+    --Desaturated--blue: hsl(224, 23%, 55%);
+    --Dark--blue: hsl(223, 47%, 23%);
+}
+
+main {
+    min-height: 100vh;
+    height: 100%;
+    background-image: url(./images/pattern-background-desktop.svg);
+    background-color: var(--Pale--blue);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Red Hat Display';
+}
+
+.card {
+    background-color: white;
+    width: 21.875rem;
+    height: 34.375rem;
+    border-radius: 20px;
+}
+
+.content {
+    color: var(--Dark--blue);
+    padding: 2.25rem 2.25rem 0.75rem 2.25rem;
+    height: 23.75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+p, a {
+    font-size: .8125rem;
+    line-height: 1.6;
+}
+.content>*:not(.payment-plan) {
+    text-align: center;
+}
+
+.payment-plan {
+    background-color: var(--Very--pale--blue);
+    border-radius: .625rem;
+    display: grid;
+    grid-template-columns: 2.4fr 3.4fr 4.2fr;
+    align-items: center;
+    padding: 1.25rem;
+}
+
+.payment-plan > img {
+    width: 40px;
+}
+
+.plan-info>:first-child {
+    font-weight: 900;
+    font-size: .875rem;
+}
+
+.payment-plan > a {
+    justify-self: end;
+    color: var(--Bright--blue);
+    font-weight: 700;
+    font-size: .75rem;
+}
+
+img {
+    display: block;
+    border-radius: 20px 20px 0px 0px;
+    max-width: 100%;
+}
+
+.content > :first-child {
+    margin-top: -1rem;
+    font-weight: 900;
+}
+
+
+
+.description, .plan-info>:nth-child(2) {
+    line-height: 1.6;
+    color: var(--Desaturated--blue);
+}
+
+button {
+    border: none;
+    padding: 1rem;
+    border-radius: .625rem;
+    background-color: var(--Bright--blue);
+    color: white;
+    font-weight: 700;
+}
+
+.cancle-order {
+    font-weight: 700;
+    color: var(--Desaturated--blue);
+}
